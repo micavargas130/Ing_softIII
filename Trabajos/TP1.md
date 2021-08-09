@@ -14,5 +14,28 @@ luego instalamos un cliente visual, en mi caso opte por instalar TortoiseGit en 
 #### 3 - Crear un repositorio remoto
 Creo un nuevo repositorio utilizando la pagina github y asocio este repositorio remoto que se encuentra vacío 
 con mi repositorio local utilizando el comando:
+```
 git remote add origin https://github.com/micavargas130/Ing_softIII.git
+```
 luego subo todos los cambios locales a github haciendo un git push
+
+#### 4 - Familizarizarse con el concepto Pull Request
+ Un pull request es una accion que se realiza para pedirle al propietario de un repositorio que nos deje
+incorporar los cambios (commits) que hicimos en nuestro fork, el cual es un "clon" del repositorio original en el cual podemos realizar cambios. Si el propietario acepta el pull request, los cambios que hicimos en el fork se adieren al repositorio original.
+
+Creo un branch local llamado "local" y agrego cambios en dicho branch.
+
+
+```
+
+git checkout -b local
+nano README.md
+git commit -a -m "Modifico README desde local"
+```
+subo el archivo README.md modificado a ese branch y hago un pull request
+
+```
+git push origin local
+```
+
+
