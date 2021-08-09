@@ -38,4 +38,11 @@ subo el archivo README.md modificado a ese branch y hago un pull request
 git push origin local
 ```
 
+![image](https://user-images.githubusercontent.com/48757979/128758911-b7493f16-35a8-4e2c-9e88-621480ca2814.png)
+
+![image](https://user-images.githubusercontent.com/48757979/128758990-1a30b386-8596-4616-a7e2-a2a5a3f2d41e.png)
+
+#### 5 - Mergear codigo con conflictos
+Para esta parte decidi instalar la herramienta P4V y configuré el Tortoise para que soporte esta herramienta.
+
 
