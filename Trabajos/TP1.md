@@ -78,8 +78,8 @@ Una vez que el conflicto es marcado como "resuelto" puedo hacer commit y push y 
 
 
 ##### Explicar las versiones LOCAL, BASE y REMOTE.
-- Local: 
-- Base:
-- Remote:
+- Local: Es el archivo que va a tener los cambios que hicimos sobre la base y que va a estar en un directorio local.
+- Remote: Es un archivo que se encuentra en el repositorio remoto, el cual va a tener cambios que se le hicieron a la base y que se le hizo push para subirlo al repositorio.
+-  Base: Es una version que se construye para poder resolver conflictos que surgieron al querer pushear codigo al repositorio remoto. Una vez que resolvemos el conflicto podemos subir la base al repositorio.
 
 
