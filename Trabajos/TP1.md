@@ -43,6 +43,43 @@ git push origin local
 ![image](https://user-images.githubusercontent.com/48757979/128758990-1a30b386-8596-4616-a7e2-a2a5a3f2d41e.png)
 
 #### 5 - Mergear codigo con conflictos
-Para esta parte decidi instalar la herramienta P4V y configuré el Tortoise para que soporte esta herramienta.
+Para esta parte decidi instalar la herramienta Beyond Compare y configuré el Tortoise para que soporte esta herramienta.
+
+Luego clone en un segundo directorio el repositorio creado en github
+```
+git clone https://github.com/micavargas130/Ing_softIII.git
+```
+En el clon inicial modifico el README.md agregando "Modifico desde el repositorio clonado"
+
+Hago un commit y subo el cambio al master en git
+
+```
+git add .
+git commit -m "Cambios desde clon"
+git push
+```
+Luego desde el segundo clon modifico el README.md donde agrego "Cambio desde clon 2.0".
+Cuando intento subir el cambio haciendo un commit y un push me muestra el siguiente error:
+
+![image](https://user-images.githubusercontent.com/48757979/129221517-a4ff9573-c73e-44fe-8f83-46e5155416de.png)
+
+usando Tortoise:
+
+![image](https://user-images.githubusercontent.com/48757979/129221873-96fd3637-7bf5-4dd8-9f48-48b5551c7e71.png)
+
+Para arreglar este error utilizo Beyond Compare en donde elijo que el README.md que se va a subir al master en github sea el del clon 2
+
+![image](https://user-images.githubusercontent.com/48757979/129222718-ac32a9fc-8221-426a-b42c-fa0b2d5c88c7.png)
+
+Una vez que el conflicto es marcado como "resuelto" puedo hacer commit y push y subirlo al master.
+
+![image](https://user-images.githubusercontent.com/48757979/129223217-29a16084-31a6-493e-8520-beec6f37c7f0.png)
+
+
+
+##### Explicar las versiones LOCAL, BASE y REMOTE.
+- Local: 
+- Base:
+- Remote:
 
 
