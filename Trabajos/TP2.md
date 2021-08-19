@@ -44,6 +44,7 @@ docker run busybox
 ```
 
   - Explicar porque no se obtuvo ningún resultado
+  No se obtiene ningún resultado porque cuando hacemos ```docker run busybox ``` lo que hace el cliente Docker es encontrar la imagen busybox, cargar el contenedor y luego ejecuta un comando en ese contenedor, pero nosotros no le damos ningun comando para ejecutar y es por eso que no hace nada ya que esta ejecutando un comando vacío.
 
   - Especificamos algún comando a correr dentro del contendor, ejecutar por ejemplo:
 ```bash
@@ -61,10 +62,11 @@ docker ps
 ```bash
 docker ps -a
 ```
-![imagen](https://user-images.githubusercontent.com/48757979/129813509-05bb83ba-dbb1-4602-bf34-c56316bd977f.png)
-
   - Mostrar el resultado y explicar que se obtuvo como salida del comando anterior.
 
+![imagen](https://user-images.githubusercontent.com/48757979/129813509-05bb83ba-dbb1-4602-bf34-c56316bd977f.png)
+
+Lo que se obtiene es una lista de los comandos realizados ordenados según el mas reciente. Podemos ver sobre que contenedor se realizó que comando y ver toda la informacion relevante de dicho contenedor como por ejemplo el ID de ese contenedor, que imagen tiene guardada y a que puertos expone.
 #### 5- Ejecutando en modo interactivo
 
   - Ejecutar el siguiente comando
@@ -157,6 +159,8 @@ docker run -d -p 80:80 daviey/nyan-cat-web
 ```
   - Accedamos nuevamente a http://localhost y expliquemos que sucede.
 ![imagen](https://user-images.githubusercontent.com/48757979/129814993-075bae64-e94d-44c1-8807-892c748f848a.png)
+
+Al ingresar al localhost nos encontramos con que la imagen de "nyan cat" está corriendo sin problemas.
 
 
 #### 9- Utilizando una base de datos
