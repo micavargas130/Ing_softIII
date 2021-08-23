@@ -185,6 +185,12 @@ select * from tabla_a;
 \q
 exit
 ```
+![imagen](https://user-images.githubusercontent.com/48757979/130380676-09caa039-5297-48c5-a2d0-34328470d141.png)
+
 - Conectarse a la base utilizando alguna IDE (Dbeaver - https://dbeaver.io/, eclipse, IntelliJ, etc...). Interactuar con los objectos objectos creados.
+
+![imagen](https://user-images.githubusercontent.com/48757979/130380692-bb37fdc9-50c1-440f-adf6-be7fe9f566ac.png)
+
 - Explicar que se logro con el comando `docker run` y `docker exec` ejecutados en este ejercicio.
 
+Con `docker run` lo que se hace es crear un contenedor, ejecutar un comando en ese contenedor y luego lo cierra, en cambio, con `docker exec` ejecutamos un comando sobre un contenedor que ya fue creado y que está corriendo.
