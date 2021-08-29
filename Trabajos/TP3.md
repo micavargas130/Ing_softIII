@@ -61,15 +61,25 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True, port=bind_port)
 ```
   - Explicar cómo funciona el sistema
-La forma en la que funciona el sistema es la siguiente: se especifica un puerto que va a ser el que escucha la aplicacion, y por cada vez que se ingrese a la direccion de ese puerto va a ir incrementando el contador de "visitas".
+ 
+    La forma en la que funciona el sistema es la siguiente: se especifica un puerto que va a ser el que escucha la aplicacion, y por cada vez que se ingrese a la d     ireccion de ese puerto va a ir incrementando el contador de "visitas".
+
   - ¿Para qué se sirven y porque están los parámetros `-e` en el segundo Docker run del ejercicio 1?
-  El `-e` sirve para pasar parametros a un comando, en este caso, se lo utiliza para especificar que puerto va a estar "escuchando" la aplicacion web.
+
+     El `-e` sirve para pasar parametros a un comando, en este caso, se lo utiliza para especificar que puerto va a estar "escuchando" la aplicacion web.
+  
   - ¿Qué pasa si ejecuta `docker rm -f web` y vuelve a correr ` docker run -d --net mybridge -e REDIS_HOST=db -e REDIS_PORT=6379 -p 5000:5000 --name web alexisfr/flask-app:latest` ?
-  Si hacemos `docker rm -f web` se va a destruir el contenedor que tiene la aplicacion web, y con el  docker run -d --net mybridge -e REDIS_HOST=db -e REDIS_PORT=6379 -p 5000:5000 --name web alexisfr/flask-app:latest` lo que va a pasar es que se va a volver a intalar la aplicacion.
+  
+    Si hacemos `docker rm -f web` se va a destruir el contenedor que tiene la aplicacion web, y con el  docker run -d --net mybridge -e REDIS_HOST=db -e      REDIS_PORT=6379 -p 5000:5000 --name web alexisfr/flask-app:latest` lo que va a pasar es que se va a volver a intalar la aplicacion.
+  
   - ¿Qué occure en la página web cuando borro el contenedor de Redis con `docker rm -f db`?
-  Si borro el contenedor de Redis, la aplicacion web no va a poder andar ya que necesita de los datos que le provee Redis y por lo tanto, si voy al localhost:5000 me muestra un mensaje de error.
+  
+     Si borro el contenedor de Redis, la aplicacion web no va a poder andar ya que necesita de los datos que le provee Redis y por lo tanto, si voy al    localhost:5000 me muestra un mensaje de error.
+  
   - Y si lo levanto nuevamente con `docker run -d --net mybridge --name db redis:alpine` ?
-  Si levanto de nuevo el base de datos, la aplicacion web vuelve a funcionar normalmente.
+ 
+    Si levanto de nuevo el base de datos, la aplicacion web vuelve a funcionar normalmente.
+  
   - ¿Qué considera usted que haría falta para no perder la cuenta de las visitas?
   
   - Para eliminar los elementos creados corremos:
