@@ -25,6 +25,7 @@
 
   - Verificar el estado de los contenedores y redes en Docker, describir:
     - ¿Cuáles puertos están abiertos?
+   
     Los puertos que estan abiertos son: el 5000 para la aplicacion web y el 6379 para la base de datos Redis.
     
     ![imagen](https://user-images.githubusercontent.com/48757979/131233908-99118d63-13d6-430d-a1cc-48c1fb4e3af3.png)
@@ -33,6 +34,7 @@
     ![imagen](https://user-images.githubusercontent.com/48757979/131233925-51972b95-c858-49f6-aa8d-263b39d51b4b.png)
 
     - ¿Qué comandos utilizó?
+    
     Para ver los puertos abiertos utilicé el comando `docker ps -a` y para ver detalles de la red utilicé `docker network inspect mybridge`
 
 
