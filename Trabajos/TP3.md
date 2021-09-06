@@ -162,7 +162,10 @@ Abro el http://localhost:5000/  desde otro navegador
 #### 5- Análisis detallado
 - Exponer más puertos urtos para ver la configuración de Redis, y las tablas de PostgreSQL con alguna IDE como dbeaver.
 - Revisar el código de la aplicación Python `example-voting-app\vote\app.py` para ver como envía votos a Redis.
+La forma en la que se envian los votos es que la app genera cookies de forma aleatoria y cuando se hace click sobre uno de los cuadrados para votar, se hace un post con la cookie del votante y la eleccion.
 - Revisar el código del worker `example-voting-app\worker\src\main\java\worker\Worker.java` para entender como procesa los datos.
+
 - Revisar el código de la aplicacion que muestra los resultados `example-voting-app\result\server.js` para entender como muestra los valores.
+
 - Escribir un documento de arquitectura sencillo, pero con un nivel de detalle moderado, que incluya algunos diagramas de bloques, de sequencia, etc y descripciones de los distintos componentes involucrados es este sistema y como interactuan entre sí.
 
