@@ -35,7 +35,9 @@
 
 #### 3- Introducción a Maven
 - Qué es Maven?
+Maven es una herramienta de software que se utiliza para la gestion de proyectos Java. Facilita todo el proceso del build (compilar y crear ejecutables), ademas podemos hacer tests, deploys, entre otras cosas.
 - Qué es el archivo POM?
+El archivo POM es un fichero de configuriacion de Maven del proyecto, en donde se especifican que modulos compoenen el proyecto, o que librerias utiliza el software que estamos desarrollando. Cuenta con lo siguiente:
     1. modelVersion
     2. groupId
     3. artifactId
