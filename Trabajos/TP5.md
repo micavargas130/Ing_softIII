@@ -35,8 +35,11 @@
 
 #### 3- Introducción a Maven
 - Qué es Maven?
+
 Maven es una herramienta de software que se utiliza para la gestion de proyectos Java. Facilita todo el proceso del build (compilar y crear ejecutables), ademas podemos hacer tests, deploys, entre otras cosas.
+
 - Qué es el archivo POM?
+ 
 El archivo POM es un fichero de configuriacion de Maven del proyecto, en donde se especifican que modulos compoenen el proyecto, o que librerias utiliza el software que estamos desarrollando. Cuenta con lo siguiente:
     1. modelVersion
     2. groupId
@@ -44,9 +47,9 @@ El archivo POM es un fichero de configuriacion de Maven del proyecto, en donde s
     4. versionId
 - Repositorios Local, Central y Remotos http://maven.apache.org/guides/introduction/introduction-to-repositories.html
 - Entender Ciclos de vida de build
-  - default
-  - clean
-  - site
+  - default: controla el despliegue del proyecto
+  - clean: controla la limpieza del proyecot
+  - site: controla la creacion del sistio de documentacion del proyecto
   - Referencia: http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Build_Lifecycle_Basics
 - Comprender las fases de un ciclo de vida, por ejemplo, default:
 
@@ -272,9 +275,26 @@ make run
 - Acceder a la aplicación en: http://localhost:5000/
 - Explicar que hace una tool como cookiecutter, make y pip.
 
+Cookiecutter: Nos permite crear proyectos utilizando templates. Es decir, que podemos crear nuevos archivos que ya tengan el contenido necesario para nuestro proyecto, sin la necesidad de que empecemos todo de cero. 
+
+Make: es una herramienta que nos permite construir de forma inmediata los programas ejecutables y las librerias. Esto lo hace leyendo los archivos llmados Makefiles que contienen todas las especificaciones sobre lo que se necesita y como crear el proyecto.
+
+Pip: me permite instalar y administrar librerias adicionales y dependencias que no son parte de la libreria estandar de python. 
+
 #### 10- Build tools para otros lenguajes
 - Hacer una lista de herramientas de build (una o varias) para distintos lenguajes, por ejemplo (Rust -> cargo)
 - Elegir al menos 10 lenguajes de la lista de top 20 o top 50 de tiobe: https://www.tiobe.com/tiobe-index/
+
+ - C++ --> Cmake
+ - Python --> Kivy /Pip
+ - Java --> Maven
+ - PHP --> Composer
+ - JavaScript --> Webpack, Grunt
+ - Assambly language --> Assambler
+ - Groovy --> Gradle
+ - Go --> Task
+ - Frotran --> Meson
+ -  Ruby --> Rake
 
 
 #### 11- Presentación
