@@ -33,6 +33,7 @@ git clone https://github.com/microservices-demo/edge-router.git
 .
 ```
 3. ¿Por qué cree usted que se está utilizando repositorios separados para el código y/o la configuración del sistema? Explique puntos a favor y en contra.
+
 En mi opinion, se utilizan repositorios separados para facilitar el deploy de codigo y hacer que sea mas flexible y mas facil de mantener. Como podemos ver, en un repositorio se incluye todo lo relativo al codigo y en otro se pone todo lo que es la configuracion. 
 
 Puntos a favor: 
@@ -48,16 +49,26 @@ Desventajas:
 4. ¿Cuál contenedor hace las veces de API Gateway?
 El contenedor que hace de API gateway es docker-compose_front-end_1
 
-6. Cuando ejecuto este comando:
+5. Cuando ejecuto este comando:
 ```bash
 curl http://localhost/customers
 ```
 6. ¿Cuál de todos los servicios está procesando la operación?
+
+La operacion esta siendo procesada por el servicio ´User´
+
 7. ¿Y para los siguientes casos?
 ```bash
 curl http://localhost/catalogue
 curl http://localhost/tags
 ```
+
+Para ambos casos se utiliza el servicio ´Catalogue´
+
 8. ¿Como perisisten los datos los servicios?
+
 9. ¿Cuál es el componente encargado del procesamiento de la cola de mensajes?
+
 10. ¿Qué tipo de interfaz utilizan estos microservicios para comunicarse?
+
+Los microservicios estan utilizando la interfaz rabbitmq
