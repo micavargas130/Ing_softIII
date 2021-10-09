@@ -23,6 +23,18 @@ docker-compose -f deploy/docker-compose/docker-compose.yml up -d
 #### 2- Investigación de los componentes
 1. Describa los contenedores creados, indicando cuales son los puntos de ingreso del sistema
 
+Se crearon los siguentes contenedores:
+
+- weaveworksdemos/front-end: se encarga de todo el diseño de la pagina  
+- weaveworksdemos/edge-router: 
+- weaveworksdemos/carts: maneja las acciones que se hacen sobr el carrito de compras
+- weaveworksdemos/catalogue: se trata el catalogo de medias en donde estan cargados todos los productos. Es un punto de ingreso del sistema.
+- weaveworksdemos/queue-master: administra los pedidos dentro de la pagina
+- weaveworksdemos/orders: maneja las ordenes de compras que se hacen en la pagina
+- weaveworksdemos/user: maneja la informacion del usuario. Es un punto de entrada del sistema
+- weaveworksdemos/payment: maneja la informacion del metodo de pago (la tarjeta)
+- weaveworksdemos/shipping: maneja la informacion del envio que ingresa el usuario
+
 3. Clonar algunos de los repositorios con el código de las aplicaciones
 ```bash
 cd socks-demo
@@ -47,7 +59,7 @@ Desventajas:
 - Las bibliotecas van a tener que actualizarse a medida que se incluyan cambios. 
 
 4. ¿Cuál contenedor hace las veces de API Gateway?
-El contenedor que hace de API gateway es docker-compose_front-end_1
+   El contenedor que hace de API gateway es docker-compose_front-end_1
 
 5. Cuando ejecuto este comando:
 ```bash
@@ -55,7 +67,7 @@ curl http://localhost/customers
 ```
 6. ¿Cuál de todos los servicios está procesando la operación?
 
-La operacion esta siendo procesada por el servicio ´User´
+    La operacion esta siendo procesada por el servicio ´User´
 
 7. ¿Y para los siguientes casos?
 ```bash
@@ -63,11 +75,14 @@ curl http://localhost/catalogue
 curl http://localhost/tags
 ```
 
-Para ambos casos se utiliza el servicio ´Catalogue´
+Para ambos casos se utiliza el servicio ´´Catalogue´´
 
 8. ¿Como perisisten los datos los servicios?
 
+   Todos los datos se guardan en una base de datos la cual es ´´mongo´´
+
 9. ¿Cuál es el componente encargado del procesamiento de la cola de mensajes?
+   El componente que procesa los mensajes es RabbitMQ
 
 10. ¿Qué tipo de interfaz utilizan estos microservicios para comunicarse?
 
