@@ -100,7 +100,14 @@ cd ./proyectos/python-flask
 docker-compose up -d
 ```
   - Explicar que sucedió!
+
+    Lo que sucedio es que con del ```docker-compose up -d ``` se extrajeron las imagenes que se encontraban en redis y en mysql, luego se descargaron y se iniciaron los servicios de esas imagenes. 
+    
   - ¿Para qué está la key `build.context` en el docker-compose.yml?
+
+     El build se lo usar para definir las opciones de configuracion que seran aplicadas al momento de crear el contenedor. El contexto se refiere a un set de archivos que se encuentran en un PATH o URL, por lo tanto, el build utilizará los archivos de ese contexto para saber donde debe conseguir las imagenes y este directorio sera tambien el contexto de creacion enviado al deamon de docker. 
+     
+     --------------------------------- me quede acá ----------------------------------
 
 #### 5- Imagen para aplicación web en Nodejs
   - Crear una la carpeta `trabajo-practico-06/nodejs-docker`
