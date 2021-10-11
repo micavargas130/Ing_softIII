@@ -85,6 +85,11 @@ mvn clean install
 
 - Sacar conclusiones del resultado
 
+En la carpeta en donde esta el pom.xml se creo una nueva carpeta llamada target la cual contiene otra carpeta que se llama maven-archiver y un jar, la carpeta maven-archiver tiene un documento que se llama pom.properties en donde figura un snapshot que muestra las propiedades que especificamos en el pom.xml.
+
+Con el ```mvn clean install``` le decimos a Maven que inicie la fase clean en cada modulo antes de ejecutar la fase install para cada modulo, es decir, que se asegura de limpiar todo lo creado en compilaciones anteriores, por eso se crea el snapshot.jar que nos dice cual es la version actual del proyecto
+
+
 #### 4- Maven Continuación
 
 - Generar un proyecto con una estructura inicial:
