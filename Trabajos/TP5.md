@@ -235,6 +235,11 @@ java -jar target\ejemplo-uber-jar.jar
     - Seleccionar el directorio donde se encuentra el pom.xml que se generó en el punto anterior. Luego continuar:
 ![alt text](./path-to-pom.png)
 
+Decidi utilizar la IDE Eclipse para realizar las pruebas:
+
+![imagen](https://user-images.githubusercontent.com/48757979/136991652-5b2e33e3-d4d2-47cf-9a83-39d3818a747d.png)
+
+
   - Familiarizarse con la interfaz grafica
     - Ejecutar la aplicación
     - Depurar la aplicación
