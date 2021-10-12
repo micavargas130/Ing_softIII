@@ -288,6 +288,9 @@ cd test
 make run
 ```
 - Acceder a la aplicación en: http://localhost:5000/
+
+![imagen](https://user-images.githubusercontent.com/48757979/136877344-dd515d00-06d1-4f43-8e28-490dccfeb01b.png)
+
 - Explicar que hace una tool como cookiecutter, make y pip.
 
 Cookiecutter: Nos permite crear proyectos utilizando templates. Es decir, que podemos crear nuevos archivos que ya tengan el contenido necesario para nuestro proyecto, sin la necesidad de que empecemos todo de cero. 
