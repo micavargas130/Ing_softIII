@@ -135,6 +135,9 @@ Se crea un snapshot del proyecto en donde se detecta si se hicieron cambios sobr
 java -cp target/ejemplo-1.0-SNAPSHOT.jar ar.edu.ucc.App
 ```
 
+![imagen](https://user-images.githubusercontent.com/48757979/136879557-b227b7a6-a792-4be1-8892-2f46beb548ad.png)
+
+
 #### 6- Manejo de dependencias
 
 - Crear un nuevo proyecto con artifactId **ejemplo-uber-jar**
@@ -185,7 +188,6 @@ java -cp target\ejemplo-uber-jar-1.0-SNAPSHOT.jar ar.edu.ucc.App
 micaela@micaela-GL553VD:~/Escritorio/ejemplo-uber-jar$ java -cp target/ejemplo-uber-jar-1.0-SNAPSHOT.jar ar.edu.ucc.App
 Hello World!
 ```
-
 
 - Sacar conclusiones y analizar posibles soluciones
 
@@ -266,7 +268,12 @@ npm start
 
 - La aplicación web estará disponible en http://localhost:3000
 
+![imagen](https://user-images.githubusercontent.com/48757979/136879850-0d0744f0-8beb-488f-842d-11575a5d88b0.png)
+
+
 - Analizar el manejo de paquetes y dependencias realizado por npm.
+
+  npm maneja los paquetes de la siguiente forma: Recibe paqueted de los autores de paquetes npm y los distribuye a los usuarios de paquetes npm. Si utilizamos el comando ``` npm install ``` se le entrega al cliente el paquete especificado que se encuentra en el "respositorio" npm, y con ```npm publish``` podemos mandar paquetes para que sean guardados.
 
 
 #### 9- Ejemplo con python
@@ -313,8 +320,3 @@ Pip: me permite instalar y administrar librerias adicionales y dependencias que 
  - Go --> Task
  - Frotran --> Meson
  -  Ruby --> Rake
-
-
-#### 11- Presentación
-
-- Subir todo el código, ejemplos y respuestas a una carpeta trabajo-practico-05.
