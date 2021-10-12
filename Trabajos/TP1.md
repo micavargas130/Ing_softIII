@@ -1,5 +1,5 @@
 # Trabajo Práctico 1
-### Desarrollo:
+## Desarrollo:
 #### 1 -Instalar Git
 Comenzamos instalando Git desde https://git-scm.com/ siguiendo todos los pasos provistos por la pagina y 
 luego instalamos un cliente visual, en mi caso opte por instalar TortoiseGit en Windows.
