@@ -129,6 +129,8 @@ mvn clean package
 
 - Analizar la salida del comando anterior y luego ejecutar el programa
 
+Se crea un snapshot del proyecto en donde se detecta si se hicieron cambios sobre el codigo y luego se lo compila para ver si funciona adecuadamente. Se le realizan una serie de run tests y si todos salen exitosos se dice que el build fue exitoso y se guarda la informacion del build en un snapshot.jar con el dia y la hora en la que se realizó.
+
 ```
 java -cp target/ejemplo-1.0-SNAPSHOT.jar ar.edu.ucc.App
 ```
@@ -161,6 +163,8 @@ public class App
 
 - Compilar el código e identificar el problema.
 
+  El build del codigo falla debido a que Maven no cuenta con los detalles de configuracion y la informacion necesaria para poder construir el proyecto, esto se soluciona agregando el pom.xlm
+
 - Agregar la dependencia necesaria al pom.xml
 
 ```xml
@@ -176,6 +180,12 @@ public class App
 ```bash
 java -cp target\ejemplo-uber-jar-1.0-SNAPSHOT.jar ar.edu.ucc.App
 ```
+
+```
+micaela@micaela-GL553VD:~/Escritorio/ejemplo-uber-jar$ java -cp target/ejemplo-uber-jar-1.0-SNAPSHOT.jar ar.edu.ucc.App
+Hello World!
+```
+
 
 - Sacar conclusiones y analizar posibles soluciones
 
