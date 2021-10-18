@@ -107,7 +107,7 @@ docker-compose up -d
 
      El build se lo usar para definir las opciones de configuracion que seran aplicadas al momento de crear el contenedor. El contexto se refiere a un set de archivos que se encuentran en un PATH o URL, por lo tanto, el build utilizará los archivos de ese contexto para saber donde debe conseguir las imagenes y este directorio sera tambien el contexto de creacion enviado al deamon de docker. 
      
-     --------------------------------- me quede acá ----------------------------------
+    
 
 #### 5- Imagen para aplicación web en Nodejs
   - Crear una la carpeta `trabajo-practico-06/nodejs-docker`
@@ -120,7 +120,14 @@ docker-compose up -d
   - Hacer un build de la imagen, nombrar la imagen **test-node**.
   - Ejecutar la imagen **test-node** publicando el puerto 3000.
   - Verificar en http://localhost:3000 que la aplicación está funcionando.
+
+  ![imagen](https://user-images.githubusercontent.com/48757979/137657543-e2765c2d-770e-45f5-8a8c-6740995b69c4.png)
+
+  
   - Proveer el Dockerfile y los comandos ejecutados como resultado de este ejercicio.
+
+![imagen](https://user-images.githubusercontent.com/48757979/137657575-3aea8af0-8272-40d4-a50a-7fe4d9ab322a.png)
+
 
 #### 6- Publicar la imagen en Docker Hub.
   - Crear una cuenta en Docker Hub si no se dispone de una.
@@ -128,12 +135,22 @@ docker-compose up -d
 ```bash
 docker login
 ```
+![imagen](https://user-images.githubusercontent.com/48757979/137652958-2cf0e61c-7acd-4522-8e96-64f88d08a1c0.png)
+
+
   - Crear un tag de la imagen generada en el ejercicio 3. Reemplazar <mi_usuario> por el creado en el punto anterior.
 ```bash
 docker tag test-node <mi_usuario>/test-node:latest
 ```
+
   - Subir la imagen a Docker Hub con el comando
 ```bash
 docker push <mi_usuario>/test-node:latest
 ``` 
+![imagen](https://user-images.githubusercontent.com/48757979/137652981-f36666b0-b2fb-4d38-bde0-ce80f7107822.png)
+
+
   - Como resultado de este ejercicio mostrar la salida de consola, o una captura de pantalla de la imagen disponible en Docker Hub.
+  
+![imagen](https://user-images.githubusercontent.com/48757979/137653013-88700737-ecdd-471b-8d0e-f483eb1a4860.png)
+
