@@ -169,3 +169,10 @@ La forma en la que se envian los votos es que la app genera cookies de forma ale
 
 - Escribir un documento de arquitectura sencillo, pero con un nivel de detalle moderado, que incluya algunos diagramas de bloques, de sequencia, etc y descripciones de los distintos componentes involucrados es este sistema y como interactuan entre sí.
 
+![imagen](https://user-images.githubusercontent.com/48757979/142096414-1c99767b-e5cb-482f-aa9b-094036929498.png)
+
+- Vote : Es en donde se define ```voter_id```  usando las cookies. Luego cuando hacemos click en algunas de las opciones de la votacion se guarda un registro de quien voto y cual opcion eligió y se hace un ```POST``` con la informacion del voto 
+- Redis: funciona de pasamano entre la webapp de ```vote``` y el ```worker```
+- Worker:  va a procesar la informacion que va a entrar a la base de datos. Se conecta a ```redis``` y a ```db``` y verifica si esta conexión esta activa . Luego si se verifico que ambas conexiones estan funciones actualiza la base de datos con un ```insert``` con el ```id``` y el ```vote```.
+- DB: Es un bd Postgress la cual recibe la info que le manda el ```worker``` para añadir informacion a la tabla db y selects del ```Results``` para mostar la informacion. 
+- Results: Los resultados de la votacion se pueden ver en la webapp ```Results``` . Esta app tiene una funcion que hace un ```select``` a la tabla *vote* que trae todos los ```votes``` agrupados por si son gatos o perros y la cantidad total de tuplas (Cantidad de votos). Luego la pagina nos muestra con los porcentajes los resultados de la votacion y la cantidad de votos
